@@ -1,0 +1,683 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  transition: all 1s;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 2%;
+  background: url('./components/i/ivory.png');
+  background-color: #34ee5c;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  border-bottom: solid 2px #207c34;
+}
+
+header a {
+  text-decoration: none;
+  color: #000;
+}
+
+.green-onions {
+  display: flex;
+  align-items: center;
+  letter-spacing: 3px;
+  opacity: 97%;
+  transition: all 2s;
+}
+
+.onion-header {
+  width: 45px;
+  margin-right: 1px;
+}
+
+.mobile-heading {
+  display: none;
+  transition: all 2s;
+}
+
+.green-onions:hover,
+.mobile-heading:hover,
+h3:hover,
+footer a:hover {
+  filter: invert(100%);
+  cursor: pointer;
+}
+
+h3 {
+  z-index: 1;
+  transition: all 2s;
+}
+
+.about-focus {
+  color: #fff;
+}
+
+.about {
+  position: absolute;
+  top: -44px;
+  right: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 125px;
+  padding: 5px 5px 10px 5px;
+  background: url('./components/i/ivory.png');
+  background-color: #34ee5c;
+  border-right: solid 0px #fff;
+  border-bottom: solid 1px #fff;
+  border-left: solid 1px #fff;
+  opacity: 0;
+  transition: 3s ease-out, opacity 1s ease-out 2s, top 1s ease-out 1s;
+}
+
+.about-display {
+  top: 55px;
+  height: auto;
+  opacity: 100%;
+  transition: 4s, opacity 1.5s linear 0.7s;
+}
+
+.about-content {
+  opacity: 0;
+  transition: 1s ease-out 0s;
+}
+
+.about-content-display {
+  opacity: 100%;
+  transition: 3s ease-in 1s;
+}
+
+.about p {
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.about-icons {
+  position: relative;
+  left: 3px;
+  width: 55px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.about-icons a {
+  color: #fff;
+  transition: color 2s;
+}
+
+.about-icons a:hover {
+  color: #000;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 111px;
+  padding-bottom: 237px;
+  background: url('./components/i/wood.png');
+  background-size: cover;
+  transition: all 2s;
+}
+
+.keyboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 799px;
+  padding-top: 27px;
+  background: url('./components/i/stone.png');
+  background-size: 82%;
+  background-color: #090f0a;
+  border: solid 5px #363636;
+  border-radius: 47px 47px 3px 3px;
+  box-shadow: 0 10px 9px #272727;
+  transition: transform 2s;
+}
+
+.green {
+  border-top: solid 7px #6e6e6e;
+  border-right: solid 2px #000;
+  border-bottom: solid 3px #000;
+  border-left: solid 2px #000;
+}
+
+.green-key {
+  height: 291px;
+  width: 91px;
+  background: url('./components/i/ivory.png');
+  background-color: #6e6e6e;
+  border: solid 1px #000;
+  border-bottom: solid 6.9px #2e2e2e;
+  transition: background-color 3s, border 3s;
+}
+
+.green-key-on {
+  background-color: #34ee5c;
+  border: solid 1px purple;
+  border-bottom: solid 6.9px #207c34;
+}
+
+.green-key:hover,
+.black-key:hover {
+  cursor: pointer;
+}
+
+.green-key:focus,
+.black-key:focus,
+.sound-button:focus,
+.power:focus {
+  outline: none;
+}
+
+.black {
+  display: flex;
+}
+
+.two {
+  position: relative;
+  right: 91px;
+  bottom: 293.5px;
+}
+
+.three {
+  position: relative;
+  bottom: 293.5px;
+}
+
+.black-key {
+  height: 176.5px;
+  width: 45px;
+  background: url('./components/i/stone.png');
+  background-size: cover;
+  background-color: black;
+  border-top: none;
+  border-right: solid 2px #272727;
+  border-left: solid 2px #272727;
+  border-bottom: solid 5px #2e2e2e;
+  margin: 0 23px;
+}
+
+.keypress-off {
+  animation: pressKeyOff;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;
+}
+
+@keyframes pressKeyOff {
+  0% {filter: brightness(100%)}
+  50% {filter: brightness(70%)}
+  100% {filter: brightness(100%)}
+}
+
+.keypress-on {
+  animation: pressKeyOn;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;
+}
+
+@keyframes pressKeyOn {
+  0% {background-color: #34ee5c;}
+  50% {background-color: #27b145;}
+  100% {background-color: #34ee5c;}
+}
+
+.buttons {
+  position: relative;
+  bottom: 148px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 715px;
+}
+
+.sound-button {
+  background: url('./components/i/ivory.png');
+  background-color: #919191;
+  border-right: solid 2.5px #272727;
+  border-bottom: solid 5px #6e6e6e;
+  border-radius: 3px;
+  margin-right: 15px;
+  transition: background-color 3s;
+}
+
+.sound-button:hover,
+.power:hover,
+.instructions:hover {
+  cursor: pointer;
+}
+
+.onion-button {
+  position: relative;
+  top: 0.5px;
+  width: 18px;
+  transition: filter 3s;
+}
+
+.onion-button-on {
+  background-color: #34ee5c;
+}
+
+.strong-btn {
+  position: relative;
+  top: 1px;
+  height: 21px;
+  width: 21px;
+}
+
+.strong-btn-on {
+  filter: invert(40%) saturate(300%) contrast(175%);
+}
+
+.power {
+  background: url('./components/i/ivory.png');
+  background-color: #919191;
+  width: 33px;
+  height: 33px;
+  border-right: solid 2.5px #222222;
+  border-bottom: solid 4px #6e6e6e;
+  border-radius: 100%;
+  transition: background-color 3s;
+}
+
+.power-on {
+  background-color: purple;
+}
+
+.instrument-selectah {
+  background-color: purple;
+}
+
+.turn-screen {
+  position: absolute;
+  top: 475px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 21px;
+  color: #fff;
+  text-align: center;
+  animation: turnScreenFade;
+  animation-duration: 2.5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes turnScreenFade {
+  0% {opacity: 0}
+  50% {opacity: 85%}
+  100% {opacity: 0}
+}
+
+.turn-screen p {
+  margin-right: 5px;
+}
+
+.arrow {
+  font-size: 51px;
+  animation: rotateArrow;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rotateArrow {
+  0% {transform: rotate(0deg)}
+  50% {transform: rotate(-180deg)}
+  100% {transform: rotate(-360deg)}
+}
+
+.instructions {
+  position: absolute;
+  top: 878px;
+  right: 1%;
+  height: 100px;
+  width: 422px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url('./components/i/paper.png');
+  background-size: cover;
+  background-color: #f5f5dc;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #000;
+  border-top: solid 2px #faf4ee;
+  transition: all 5s;
+  opacity: 95%;
+}
+
+.instructions-display {
+  top: 423px;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  height: 500px;
+  transition: all 5s, height 3.5s, top 3.5s;
+}
+
+.instructions:hover h1 {
+  border-bottom: solid 2px #000;
+}
+
+.instructions h1 {
+  transition: top 6s;
+}
+
+.instructions-h1-display {
+  display: none;
+}
+
+ul {
+  height: 0;
+  opacity: 0;
+  font-size: 0px;
+  line-height: 0px;
+}
+
+.ul-display {
+  position: relative;
+  right: 11px;
+  opacity: 100%;
+  height: auto;
+  font-size: 16px;
+  line-height: 20px;
+  transition: opacity 4s linear 1.5s;
+}
+
+li {
+  margin-bottom: 20px;
+}
+
+.onion-instructions {
+  position: relative;
+  top: 2px;
+  left: 1px;
+  width: 17px;
+}
+
+.onion-head {
+  width: 35px;
+  transform: rotate(-45deg);
+  opacity: 95%;
+  animation: bumpHead;
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes bumpHead {
+  0% {position: relative; top: 3px;}
+  50% {position: relative; top: 0px;}
+  100% {position: relative; top: 3px;}
+}
+
+.keyboard-player {
+  width: 150px;
+  opacity: 75%;
+}
+
+.hands {
+  position: relative;
+  bottom: 45px;
+  width: 108px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hand-left {
+  width: 20px;
+  animation: handLeft;
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes handLeft {
+  0% {position: relative; top: 0px;}
+  50% {position: relative; top: 3px;}
+  100% {position: relative; top: 0px;}
+}
+
+.hand-right {
+  width: 20px;
+  transform: rotateY(180deg);
+  animation: handRight;
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes handRight {
+  0% {position: relative; top: 4px;}
+  50% {position: relative; top: 0px;}
+  100% {position: relative; top: 4px;}
+}
+
+.player {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height:0px;
+  opacity: 0%;
+}
+
+.player-display {
+  height: auto;
+  opacity: 85%;
+  transition: height 6s ease-in 2s, opacity 4s ease-in 2s;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 66px;
+  padding-bottom: 77px;
+  background: url('./components/i/ivory-copy.png');
+  background-color: #000;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 19px;
+  color: #000;
+  border-top: solid 5px #202020;
+}
+
+footer a {
+  color: #000;
+  transition: all 2s;
+}
+
+@media (max-width: 1722px) {
+  .instructions {
+    right: auto;
+  }
+}
+
+@media (max-width: 833px) {
+  .keyboard {
+    width: 619px;
+    padding-top: 28px;
+    height: 399px;
+    background-size: 85%;
+    border-radius: 40px 40px 3px 3px;
+  }
+
+  .green {
+    border-top: solid 5px #6e6e6e;
+  }
+
+  .green-key {
+    width: 71px;
+    height: 235px;
+  }
+
+  .two {
+    right: 70px;
+    bottom: 238.7px;
+  }
+  
+  .three {
+    position: relative;
+    bottom: 238.7px;
+  }
+  
+  .black-key {
+    width: 35px;
+    height: 145px;
+    margin: 0 18px;
+  }
+
+  .buttons {
+    position: relative;
+    bottom: 123px;
+    width: 555px;
+  }
+
+  .sound-button {
+    margin-right: 12.5px;
+  }
+  
+  .onion-button {
+    width: 15.5px;
+  }
+  
+  .strong-btn {
+    height: 15.5px;
+    width: 15.5px;
+  }
+
+  .power {
+    width: 30px;
+    height: 30px;
+  }
+
+  .instructions {
+    position: absolute;
+    top:  766px;
+  }
+
+  .instructions-display {
+    top: 299px;
+  }
+}
+
+@media (max-width: 644px) {
+  .keyboard {
+    width: 439px;
+    padding-top: 24.5px;
+    height: 308px;
+    background-size: 95%;
+    border-radius: 29px 29px 3px 3px;
+  }
+
+  .green {
+    border-top: solid 4px #6e6e6e;
+  }
+
+  .green-key {
+    width: 51px;
+    height: 184px;
+  }
+
+  .two {
+    right: 51px;
+    bottom: 187.5px;
+  }
+  
+  .three {
+    position: relative;
+    bottom: 187.5px;
+  }
+  
+  .black-key {
+    width: 25px;
+    height: 113px;
+    margin: 0 13px;
+  }
+
+  .buttons {
+    position: relative;
+    bottom: 97px;
+    display: flex;
+    justify-content: space-between;
+    width: 395px;
+  }
+
+  .sound-button {
+    margin-right: 10px;
+  }
+  
+  .onion-button {
+    width: 10px;
+  }
+  
+  .strong-btn {
+    height: 10px;
+    width: 10px;
+  }
+
+  .power {
+    width: 29px;
+    height: 29px;
+    padding-left: 5.5px;
+  }
+
+  .instructions {
+    position: absolute;
+    top:  677px;
+  }
+
+  .instructions-display {
+    top: 266px;
+  }
+}
+
+@media (max-width: 450px) {
+  header {
+    padding: 19.5px 2%;
+  }
+
+  .main-heading {
+    display: none;
+  }
+
+  .mobile-heading {
+    display: inline;
+  }
+
+  main {
+    padding-top: 155px;
+    padding-bottom: 263px;
+  }
+
+  .keyboard {
+    transform: rotate(90deg);
+    position: relative;
+    left: 1%;
+  }
+
+  .turn-screen {
+    display: flex;
+  }
+
+  .instructions {
+    position: absolute;
+    top:  748px;
+    width: 360px;
+  }
+
+  .instructions-display {
+    top: 291px;
+  }
+}
