@@ -1,0 +1,179 @@
+.instructions {
+  position: absolute;
+  top: 878px;
+  right: 1%;
+  height: 100px;
+  width: 422px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url('../../../i/paper.png');
+  background-size: cover;
+  background-color: #f5f5dc;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #000;
+  border-top: solid 2px #faf4ee;
+  transition: all 5s;
+  opacity: 95%;
+}
+
+.instructions-display {
+  top: 423px;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  height: 500px;
+  transition: all 5s, height 3.5s, top 3.5s;
+}
+
+.instructions h1 {
+  transition: top 6s;
+}
+
+.instructions-h1-display {
+  display: none;
+}
+
+.instructions:hover {
+  cursor: pointer;
+}
+
+.instructions:hover h1 {
+  border-bottom: solid 2px #000;
+}
+
+ul {
+  height: 0;
+  opacity: 0;
+  font-size: 0px;
+  line-height: 0px;
+}
+
+.ul-display {
+  position: relative;
+  right: 11px;
+  opacity: 100%;
+  height: auto;
+  font-size: 16px;
+  line-height: 20px;
+  transition: opacity 4s linear 1.5s;
+}
+
+li {
+  margin-bottom: 20px;
+}
+
+.onion-instructions {
+  position: relative;
+  top: 2px;
+  left: 1px;
+  width: 17px;
+}
+
+.onion-head {
+  width: 35px;
+  transform: rotate(-45deg);
+  opacity: 95%;
+  animation: bumpHead 0.8s linear 0s infinite;
+}
+
+@keyframes bumpHead {
+  0% {position: relative; top: 3px;}
+  50% {position: relative; top: 0px;}
+  100% {position: relative; top: 3px;}
+}
+
+.keyboard-player {
+  width: 150px;
+  opacity: 75%;
+}
+
+.hands {
+  position: relative;
+  bottom: 45px;
+  width: 108px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hand-left {
+  width: 20px;
+  animation: handLeft;
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes handLeft {
+  0% {position: relative; top: 0px;}
+  50% {position: relative; top: 3px;}
+  100% {position: relative; top: 0px;}
+}
+
+.hand-right {
+  width: 20px;
+  transform: rotateY(180deg);
+  animation: handRight;
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes handRight {
+  0% {position: relative; top: 4px;}
+  50% {position: relative; top: 0px;}
+  100% {position: relative; top: 4px;}
+}
+
+.player {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height:0px;
+  opacity: 0%;
+}
+
+.player-display {
+  height: auto;
+  opacity: 85%;
+  transition: height 6s ease-in 2s, opacity 4s ease-in 2s;
+}
+
+@media (max-width: 1722px) {
+  .instructions {
+    right: auto;
+  }
+}
+
+@media (max-width: 833px) {
+  .instructions {
+    position: absolute;
+    top:  766px;
+  }
+
+  .instructions-display {
+    top: 299px;
+  }
+}
+
+@media (max-width: 644px) {
+  .instructions {
+    position: absolute;
+    top:  677px;
+  }
+
+  .instructions-display {
+    top: 266px;
+  }
+}
+
+@media (max-width: 450px) {
+  .instructions {
+    position: absolute;
+    top:  748px;
+    width: 360px;
+  }
+
+  .instructions-display {
+    top: 291px;
+  }
+}

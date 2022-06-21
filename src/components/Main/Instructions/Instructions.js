@@ -1,10 +1,20 @@
 import React from 'react';
+import KeyboardPlayer from '../../../i/keyboard-player.png';
+import Hand from '../../../i/hand.png';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faPowerOff} from '@fortawesome/free-solid-svg-icons';
 
 export default function Instructions(props) {
+
+    const displayInstructions = () => {
+        document.querySelector('.instructions').classList.toggle('instructions-display');
+        document.querySelectorAll('h1')[1].classList.toggle('instructions-h1-display');
+        document.querySelector('ul').classList.toggle('ul-display');
+        document.querySelector('.player').classList.toggle('player-display');
+    }
+
     return (
-        <div className="instructions" onClick={props.displayInstructions}>
+        <div className="instructions" onClick={displayInstructions}>
             <h1>Instructions</h1>
             <ul>
                 <li>Click the - <FontAwesomeIcon icon={faPowerOff} /> - button to turn the keyboard on/off.</li>
@@ -18,10 +28,10 @@ export default function Instructions(props) {
             </ul>
             <div className='player'>
                 <img className='onion-head' src={props.Onion} alt='' />
-                <img className='keyboard-player' src={props.KeyboardPlayer} alt='' />
+                <img className='keyboard-player' src={KeyboardPlayer} alt='' />
                 <div className='hands'>
-                    <img className='hand-left' src={props.Hand} alt='' />
-                    <img className='hand-right' src={props.Hand} alt='' />
+                    <img className='hand-left' src={Hand} alt='' />
+                    <img className='hand-right' src={Hand} alt='' />
                 </div>
             </div>
         </div>
