@@ -4,3 +4,5 @@
 [greenonions.netlify.app](https://greenonions.netlify.app/)
 ***
 GreenOnions is an online MIDI keyboard built with React.js
+---
+(not working on Safari & Firefox - feel free to fork the project & work out the bugs)
